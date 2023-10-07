@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tasks.EditTaskActivity">
+
+    <TextView
+        android:id="@+id/editTextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/title"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTxtTitle"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:autofillHints="@string/titleBox"
+        android:hint="@string/titleBox"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/editTextViewTitle"
+        app:layout_constraintTop_toTopOf="@+id/editTextViewTitle" />
+
+    <TextView
+        android:id="@+id/editTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/date"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewTitle" />
+
+    <EditText
+        android:id="@+id/editTxtDate"
+        android:layout_width="139dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/dateBox"
+        android:hint="@string/dateBox"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/editTextViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewDate"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/editImageButtonDate"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/dateSelector"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxtDate"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtTime"
+        app:layout_constraintStart_toEndOf="@+id/editTxtDate"
+        app:layout_constraintTop_toTopOf="@+id/editTxtDate"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTxtTime"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="55dp"
+        android:autofillHints="@string/timeBox"
+        android:hint="@string/timeBox"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxtDate"
+        app:layout_constraintStart_toEndOf="@+id/editTxtDate"
+        app:layout_constraintTop_toTopOf="@+id/editTxtDate"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/editImageButtonTime"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/timeSelector"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/time"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxtTime"
+        app:layout_constraintStart_toEndOf="@+id/editTxtTime"
+        app:layout_constraintTop_toTopOf="@+id/editTxtTime"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/editTextViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/location"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewDate" />
+
+    <EditText
+        android:id="@+id/editTxtLocation"
+        android:layout_width="283dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/locationBox"
+        android:hint="@string/locationBox"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextViewLocation"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewLocation"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/editButtonVerifyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/verify"
+        android:text="@string/verify_address"
+        app:layout_constraintStart_toStartOf="@+id/editTxtLocation"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtLocation" />
+
+    <CheckBox
+        android:id="@+id/editCheckBoxAddressCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/valid_address"
+        app:layout_constraintBottom_toBottomOf="@+id/editButtonVerifyAddress"
+        app:layout_constraintStart_toEndOf="@+id/editButtonVerifyAddress"
+        app:layout_constraintTop_toTopOf="@+id/editButtonVerifyAddress" />
+
+    <CheckBox
+        android:id="@+id/editCheckBoxLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/enable_location_access"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editButtonVerifyAddress" />
+
+    <Button
+        android:id="@+id/editDeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/delete_red"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editbuttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/save_green"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

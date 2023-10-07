@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobilegroup3.lifetaskhelper">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LifeTaskHelper">
+        <activity
+            android:name=".ui.tasks.TaskInformationActivity"
+            android:exported="true"
+            android:label="Task Information" />
+        <activity
+            android:name=".ui.tasks.ActionRecordTaskActivity"
+            android:exported="true"
+            android:label="Action Record Info" />
+        <activity
+            android:name=".ui.tasks.EditTaskActivity"
+            android:exported="true"
+            android:label="Edit Action" />
+        <activity
+            android:name=".ui.tasks.NewTaskActivity"
+            android:exported="true"
+            android:label="New Action" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LifeTaskHelper.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

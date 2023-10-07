@@ -1,1 +1,2 @@
-# LifeTaskHelper
+# LifeTasks
+Mobile Development Project

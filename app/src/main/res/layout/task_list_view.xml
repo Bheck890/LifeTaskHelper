@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    tools:ignore="UselessParent">
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="bottom|left"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/sincePreformedTxt"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="top|left"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/taskDoneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttons"
+            android:gravity="bottom|left"
+            android:text="@string/preformed_task"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/taskInfoBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/info"
+        android:backgroundTint="@color/grey"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/reminderIcon"
+        android:layout_width="15dp"
+        android:layout_height="28dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:minWidth="48dp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,InefficientWeight" />
+
+    <android.widget.Button
+        android:id="@+id/taskSettingsBtn"
+        android:layout_width="46dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/gear"
+        android:backgroundTint="@color/grey"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</LinearLayout>
+

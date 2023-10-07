@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tasks.ActionRecordTaskActivity">
+
+    <TextView
+        android:id="@+id/recordTextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/titleInfo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recordTxtTitle"
+        android:layout_width="303dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:autofillHints="@string/titleBox"
+        android:hint="@string/titleBox"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/recordTextViewTitle"
+        app:layout_constraintTop_toTopOf="@+id/recordTextViewTitle"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/recordTextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/description"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/recordTxtDescription"
+        android:layout_width="289dp"
+        android:layout_height="142dp"
+        android:autofillHints="@string/descriptionBox"
+        android:hint="@string/descriptionBox"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/recordTextViewDescription"
+        app:layout_constraintTop_toBottomOf="@+id/recordTextViewDescription"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/recordTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/newDate"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordTxtDescription" />
+
+    <EditText
+        android:id="@+id/recordTxtDate"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/dateBox"
+        android:hint="@string/dateBox"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/recordTextViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/recordTextViewDate"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/recordImageButtonDate"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/dateSelector"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/recordTxtDate"
+        app:layout_constraintEnd_toStartOf="@+id/recordTxtTime"
+        app:layout_constraintStart_toEndOf="@+id/recordTxtDate"
+        app:layout_constraintTop_toTopOf="@+id/recordTxtDate"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/recordTxtTime"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="55dp"
+        android:autofillHints="@string/timeBox"
+        android:hint="@string/timeBox"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/recordTxtDate"
+        app:layout_constraintStart_toEndOf="@+id/recordTxtDate"
+        app:layout_constraintTop_toTopOf="@+id/recordTxtDate"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/recordImageButtonTime"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/timeSelector"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/time"
+        app:layout_constraintBottom_toBottomOf="@+id/recordTxtTime"
+        app:layout_constraintStart_toEndOf="@+id/recordTxtTime"
+        app:layout_constraintTop_toTopOf="@+id/recordTxtTime"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/recordTextViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/newLocation"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordTxtDate" />
+
+    <EditText
+        android:id="@+id/recordTxtLocation"
+        android:layout_width="283dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/locationBox"
+        android:hint="@string/locationBox"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/recordTextViewLocation"
+        app:layout_constraintTop_toBottomOf="@+id/recordTextViewLocation"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/recordButtonVerifyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/verify"
+        android:text="@string/verify_address"
+        app:layout_constraintStart_toStartOf="@+id/recordTxtLocation"
+        app:layout_constraintTop_toBottomOf="@+id/recordTxtLocation"
+        tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/recordCheckBoxAddressCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/valid_address"
+        app:layout_constraintBottom_toBottomOf="@+id/recordButtonVerifyAddress"
+        app:layout_constraintStart_toEndOf="@+id/recordButtonVerifyAddress"
+        app:layout_constraintTop_toTopOf="@+id/recordButtonVerifyAddress" />
+
+    <Button
+        android:id="@+id/recordSaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/save_green"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/recordTextViewDataNotice"
+        android:layout_width="371dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/record_all_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordButtonVerifyAddress" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tasks.TaskInformationActivity">
+
+
+    <TextView
+        android:id="@+id/infoTextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/titleInfo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/infoTxtTitle"
+        android:layout_width="238dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:autofillHints="@string/titleBox"
+        android:hint="@string/titleBox"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/infoTextViewTitle"
+        app:layout_constraintTop_toTopOf="@+id/infoTextViewTitle"
+        tools:ignore="TextContrastCheck" />
+
+    <android.widget.Button
+        android:id="@+id/infoBtnSettings"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/gear"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/infoTextViewActionList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/preformedList"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/infoTextViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/infoTextViewTitle" />
+
+
+    <!--
+    <ScrollView
+        android:id="@+id/actionsScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:layout_constraintStart_toStartOf="@+id/infoTextViewActionList"
+        app:layout_constraintTop_toBottomOf="@+id/infoTextViewActionList"
+        <ListView
+            android:id="@+id/infoListViewTaskHistory"
+            android:layout_width="350dp"
+            android:layout_height="200dp"/>
+    </ScrollView>
+    -->
+
+    <ListView
+        android:id="@+id/infoListViewTaskHistory"
+        android:layout_width="350dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/infoTextViewActionList"
+        app:layout_constraintTop_toBottomOf="@+id/infoTextViewActionList" />
+
+    <TextView
+        android:id="@+id/infoTxtViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/preformedListNotes"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/infoTextViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/infoListViewTaskHistory" />
+
+    <ScrollView
+        android:id="@+id/DescriptionScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="@+id/infoTxtViewDescription"
+        app:layout_constraintTop_toBottomOf="@+id/infoTxtViewDescription">
+        <TextView
+            android:id="@+id/infoTxtDescription"
+            android:layout_width="341dp"
+            android:layout_height="192dp"
+            android:layout_marginTop="5dp"
+            android:autofillHints="@string/descriptionBox"
+            android:hint="@string/descriptionBox"
+            tools:ignore="TextContrastCheck" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/infoTextViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/preformedListLocation"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/DescriptionScroll"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionScroll" />
+
+    <TextView
+        android:id="@+id/infoTxtLocation"
+        android:layout_width="338dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/locationBox"
+        android:hint="@string/locationBox"
+        app:layout_constraintStart_toStartOf="@+id/infoTextViewLocation"
+        app:layout_constraintTop_toBottomOf="@+id/infoTextViewLocation"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
