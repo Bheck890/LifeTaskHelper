@@ -27,12 +27,12 @@ New Event<br />
 
 ## Diagrams
 Database Diagram <br />
-![alt text](docs/Diagrams/Database%20Diagram.png)
+![alt text](ReadMe-Pics/DataTable.png)
 
 ## Built With
 * Android Studio
 * Gradle 
-* Android Geo.Coder
+* Android Geo Coder
 * SQLiteDatabase
 
 ## Author
@@ -43,6 +43,8 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 Project idea - Brandon (Bailey) Heck
+Email system - Jess Wazbinski
+Logo and about - Michelle Nater
 
 ## History
 This project was an Team assignment with an app with SQL Tables, <br />

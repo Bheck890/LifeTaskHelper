@@ -1,0 +1,23 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Task {
+  title integer
+  latitude integer
+  longitude integer 
+  address string
+  enable_address bool
+  address_verified bool
+  date string
+  hour integer
+  minute integer
+}
+
+Table Action {
+  _id integer [primary key]
+  task_id integer
+  description text
+  date text
+  time text
+  location text
+}
