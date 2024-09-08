@@ -47,7 +47,9 @@
     <string name="preformedListNotes">Selected Action Description:</string>
     <string name="preformedListLocation">Selected Action Address:</string>
 
-    <string name="developed">Developed by:\n\nBrandon Heck</string>
+    <string name="developed">Developed by:\n\nBrandon Heck,\n Jessica Wazbinski,
+        \n Michelle Nater </string>
+    <string name="school">School: Seminole State College</string>
     <string name="version">Version 0.0.1</string>
 
     <string name="contactUs">If there is anything that can improve the application,
